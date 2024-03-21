@@ -1,18 +1,37 @@
-import 'package:flutter/material.dart';
-import 'package:virtual_wallet_app/pages/home_page.dart';
+// ignore_for_file: prefer_const_constructors
 
-void main() {
-  runApp(const MyApp());
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:virtual_wallet_app/firebase_options.dart';
+//import 'package:virtual_wallet_app/pages/home_page.dart';
+import 'package:virtual_wallet_app/pages/login_page.dart';
+import 'package:virtual_wallet_app/preferences/pref_usuarios.dart';
+
+void main() async{
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await PreferenciaUsuario.init();
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+   MyApp({super.key});
+
+  final prefs = PreferenciaUsuario();
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      initialRoute: prefs.ultimaPagina,
+      //home: HomePage(),
+      routes: {
+        LoginPage.routname  :(context) => const LoginPage()
+      },
     );
   }
 }
