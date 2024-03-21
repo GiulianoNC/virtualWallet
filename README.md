@@ -3,7 +3,10 @@
 icono
 
 <img src="https://github.com/GiulianoNC/virtualWallet/assets/70980712/42cc49df-9ffb-4b5e-811d-b923bcbd418a" width="100" alt="image">
+con flutter_launcher_icons
 
+splash screen
+<img src="https://github.com/GiulianoNC/virtualWallet/assets/70980712/39fd1018-7946-4ed7-968d-99f683a9affd" width="200" alt="image">
 
 First layout
 
