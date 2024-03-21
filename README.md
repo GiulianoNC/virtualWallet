@@ -2,7 +2,7 @@
 
 icono
 
-<img src="https://github.com/GiulianoNC/virtualWallet/assets/70980712/9e8d4564-067d-4e75-9691-1006c61f2c76" width="100" alt="image">
+<img src="https://github.com/GiulianoNC/virtualWallet/assets/70980712/42cc49df-9ffb-4b5e-811d-b923bcbd418a" width="100" alt="image">
 
 
 First layout
