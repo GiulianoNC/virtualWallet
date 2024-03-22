@@ -1,6 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
+import 'package:virtual_wallet_app/preferences/pref_usuarios.dart';
 import 'package:virtual_wallet_app/util/snackbar.dart';
 import 'package:virtual_wallet_app/utils/auth.dart';
 
@@ -79,25 +81,7 @@ class RegisterPage extends StatelessWidget {
                 ),
                 SizedBox(height: 20.0),
                 Flexible(
-                  child: ElevatedButton(
-                    onPressed: () async {
-                      _formKey.currentState?.save();
-
-                      if (_formKey.currentState?.validate() == true) {
-                        final v = _formKey.currentState?.value;
-                        var result = await _auth.createAccount(v?["email"], v?["password"]);
-
-                        if (result == 1) {
-                          showSnackBar(context, "La contraseña es demasiado débil");
-                        } else if (result == 2) {
-                          showSnackBar(context, "El correo ya está en uso");
-                        } else if (result != null) {
-                          Navigator.popAndPushNamed(context, "/home");
-                        }
-                      }
-                    },
-                    child: Text("Registrarse"),
-                  ),
+                  child: butonRegister(context),
                 ),
               ],
             ),
@@ -106,4 +90,46 @@ class RegisterPage extends StatelessWidget {
       ),
     );
   }
+ElevatedButton butonRegister(BuildContext context){
+  var prefs = PreferenciaUsuario();
+
+  return ElevatedButton(
+    onPressed:()async{  
+      _formKey.currentState?.save();
+
+      if (_formKey.currentState?.validate() == true) {
+        final v = _formKey.currentState?.value;
+        var result = await _auth.createAccount(v?["email"], v?["password"]);
+
+        if (result == 1) {
+          showSnackBar(context, "La contraseña es demasiado débil");
+        } else if (result == 2) {
+          showSnackBar(context, "El correo ya está en uso");
+        } else if (result != null) {
+          Navigator.popAndPushNamed(context, "/home");
+          
+          //recuperar el uid del usuario de la autenticacion
+          prefs.ultimouid = result;  
+
+          //relacion los datos (uid) de autenticacion con el nro de docu del user en base de datos
+          FirebaseFirestore.instance.collection("user").doc(result).set(
+            {
+              "email":v? ["email"],
+              "password":v?["password"]
+            }
+          );
+
+          //instanciamos firestore 
+          /*FirebaseFirestore.instance.collection("user").add({
+             //y agregamos el email y usuario que se registre en la nube
+              "email":v? ["email"],
+              "password":v?["password"]
+          }*/
+          
+        }
+      }          
+    }, 
+    child: Text("Registrarse"),
+  );
+}
 }

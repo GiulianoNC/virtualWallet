@@ -120,7 +120,7 @@ class LoginPage extends StatelessWidget {
             
 
             if (_formKey.currentState?.validate() == true) {
-            final v = _formKey.currentState?.value;
+            //final v = _formKey.currentState?.value;
             var result = await _auth.signInEmailAndPassword(_emailController.text, _passwordController.text);
 
             if (result == 1) {

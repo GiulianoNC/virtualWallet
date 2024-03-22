@@ -19,5 +19,14 @@ set ultimaPagina(String value){
   _prefs.setString("ultimaPagina", value);
 }
 
+String get ultimouid{
+  //retorna la ultima pagina, sino login
+  return _prefs.getString("ultimouid") ??"";
+}
+
+set ultimouid(String value){
+  _prefs.setString("ultimouid", value);
+}
+
 
 }
