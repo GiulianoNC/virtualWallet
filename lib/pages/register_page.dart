@@ -18,7 +18,7 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Registro"),
+        title: Text("Register"),
         centerTitle: true,
       ),
       backgroundColor: Colors.grey[300], // Fondo gris
@@ -40,16 +40,16 @@ class RegisterPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20.0),
-                Flexible(
+                /*Flexible(
                   child: Text(
-                    "Registro",
+                    "Register",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                ),
+                ),*/
                 SizedBox(height: 20.0),
                 Flexible(
                   child: FormBuilderTextField(
@@ -69,7 +69,7 @@ class RegisterPage extends StatelessWidget {
                   child: FormBuilderTextField(
                     name: 'password',
                     decoration: InputDecoration(
-                      labelText: 'Contraseña',
+                      labelText: 'password',
                       border: OutlineInputBorder(),
                     ),
                     validator: FormBuilderValidators.compose([
@@ -129,7 +129,7 @@ ElevatedButton butonRegister(BuildContext context){
         }
       }          
     }, 
-    child: Text("Registrarse"),
+    child: Text("Register"),
   );
 }
 }

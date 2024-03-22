@@ -46,7 +46,7 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 20.0),
                 Expanded(
                     child:
-                    Text("Login",
+                    Text("Sign in",
                     textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 24.0,
@@ -97,7 +97,7 @@ class LoginPage extends StatelessWidget {
                      Navigator.pushNamed(context, "/register");
              
                   } ,
-                  child: Text("Registrase",
+                  child: Text("Register",
                       style: TextStyle(
                         fontSize: 13.0,
                         fontWeight: FontWeight.bold,
@@ -137,7 +137,7 @@ class LoginPage extends StatelessWidget {
 
         },
         child:
-        Text("Iniciar Sesion")
+        Text("Sign in")
     );
   }
 }
