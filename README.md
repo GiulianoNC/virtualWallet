@@ -20,7 +20,7 @@ Se importa firebase_auth para la autenticacion de los usuarios, y la verificar d
 
 <img src="https://github.com/GiulianoNC/virtualWallet/assets/70980712/1ab01d25-c935-4d86-8923-15d7442ee3ab" width="200" alt="image">
 
-una vez que complete el formulario y se aprete registrase, se relacionará los datos uid de Autentication de Firestore y la base de datos de Firestore, para una mejor manipulación de los datos que se registraron
+una vez que complete el formulario y se  registre, relacionará los datos uid de Autentication Firebase  y la base de datos de Firestore, para una mejor manipulación de los datos que se insertaron con el registro
 
 <img src="https://github.com/GiulianoNC/virtualWallet/assets/70980712/098cc7c3-9bd7-4e2a-b984-d78927675d10" width="200" alt="image">
 
