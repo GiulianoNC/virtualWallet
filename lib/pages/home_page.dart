@@ -8,6 +8,8 @@ import 'package:virtual_wallet_app/util/my_list_tile.dart';
 
 
 class HomePage extends StatefulWidget {
+    static const String routeName = "HomePage";
+
   const HomePage({super.key});
 
   @override

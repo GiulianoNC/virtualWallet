@@ -5,7 +5,7 @@ void showSnackBar(BuildContext context, String mensaje){
   ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
           content: Text("mensajes"),
-          duration: Duration(seconds: 800),
+          duration: Duration(seconds: 400),
       )
   );
 }
