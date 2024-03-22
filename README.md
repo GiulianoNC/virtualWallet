@@ -10,7 +10,10 @@ https://pub.dev/packages/flutter_launcher_icons
 
 splash screen
 
-<img src="https://github.com/GiulianoNC/virtualWallet/assets/70980712/39fd1018-7946-4ed7-968d-99f683a9affd" width="200" alt="image">
+<img src="https://github.com/GiulianoNC/virtualWallet/assets/70980712/39fd1018-7946-4ed7-968d-99f683a9affd" width="200" alt="image">  
+flutter_native_splash
+
+https://pub.dev/packages/flutter_native_splash
 
 login
 
@@ -28,12 +31,4 @@ por ejemplo acá quiero recuperar el usuario para poder insertarlo en la bienven
 
 <img src="https://github.com/GiulianoNC/virtualWallet/assets/70980712/c9627ff4-3267-4e39-ba43-1e62c01ef125" width="200" alt="image">
 
-
-flutter_native_splash
-
-https://pub.dev/packages/flutter_native_splash
-
-First layout
-
-<img src="https://github.com/GiulianoNC/virtualWallet/assets/70980712/0054950e-4a0b-4beb-93d7-f20267b63645" width="200" alt="image">
 
