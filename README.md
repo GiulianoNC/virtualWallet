@@ -16,7 +16,7 @@ login
 
 <img src="https://github.com/GiulianoNC/virtualWallet/assets/70980712/4862a19c-0689-4bed-8f97-2edcccade65b" width="200" alt="image">
 
-Se importa firebase_auth para la autenticacion de los usuarios, para verificar la existencia de usuario u/o contraseña, si no se registró el usuario se sugiere el registro del mismo
+Se importa firebase_auth para la autenticacion de los usuarios, y la verificar de usuario y/o contraseña, si no se registró el usuario se sugiere el registro del mismo
 
 <img src="https://github.com/GiulianoNC/virtualWallet/assets/70980712/1ab01d25-c935-4d86-8923-15d7442ee3ab" width="200" alt="image">
 
